@@ -110,12 +110,17 @@ body{
     vertical-align: baseline;
     border-radius: .25em;
 }
-.label--default{
-    background-color: #777;
-}
-.label--blue{
-    background-color: #2a7ae2;
-}
+    .label--default{
+        background-color: #777;
+    }
+        .label:hover{
+            background-color: #555;
+        }
+    .label--blue{
+        background-color: #2a7ae2;
+    }
+
+
 /* HEADER */
 .site-header{
 
@@ -134,29 +139,29 @@ body{
     .site-header > .wrapper{
         display: flex;
         justify-content: space-between;
+        text-transform: capitalize;
     }   
+        .site-title{
+            font-size: 26px;
+            font-weight: 400;
+            color: #424242;
+        }
         .site-navigation{
             display: flex;
             align-self: center;
-
-            text-transform: capitalize;
         }
-            .site-title{
-                font-size: 26px;
-                font-weight: 400;
-                color:#424242;
-            }
             .menu{
                 display: flex;
             }
             .menu a{
                 margin: 0 16px;
+                font-size: 20px;
             }
-        .site-navigation > a{
-            display:none
-        }
         .site-navigation .fa-bars{
             font-size: 24px;
+        }
+        .site-navigation > a{
+            display: none;
         }
     .site-header > .wrapper a:hover{
         text-decoration: underline;
