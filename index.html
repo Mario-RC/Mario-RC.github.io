@@ -18,20 +18,20 @@
     </script>
 </head>
 <body>
-    <header class="site-header" id="overlay" onclick="off()">
+    <header class="site-header site-header-home">
         <div class="wrapper">       
-            <h1 class="site-title">Mario Rodríguez-Cantelar</h1>
+            <h1 class="site-title"><a href="index.html">Mario Rodríguez-Cantelar</a></h1>
             <nav class="site-navigation">
                 <div class="menu">
                     <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-                    <a href="research.html"><i class="fa fa-fw fa-search"></i>Research</a>
+                    <a href="blog.html"><i class="fa fa-fw fa-search"></i>Blog</a>
                     <a href="about.html"><i class="fa fa-fw fa-user"></i>About</a>
                 </div>
-                <a class="btn-menu trigger-menu" ><i class="fa fa-bars"></i></a>
+                <a class="btn-menu trigger-menu" ><i class="fa fa-fw fa-bars"></i></a>
             </nav>
         </div>       
     </header>
-    <main class="site-main">
+    <main class="site-main site-main-home">
         <div class="wrapper">
             <aside class="site-aside">
                 <div class="aside-profile">
@@ -39,18 +39,20 @@
                     <a><img alt="Mario Rodríguez-Cantelar" src="assets/img/profile.jpg"/></a>
                     <p><b>MARIO</b><span>RODRÍGUEZ-CANTELAR</span></p>
                 </div>
-                <div class="aside-social">
-                    <div class="aside-social__items capitalize">
-                        <a href="#"><i class="fa fa-fw fa-map-marker"></i>Madrid, Spain</a></div>
-                    <div class="aside-social__items">
+                <div class="aside-contact">
+                    <div class="aside-contact__items">
+                        <i class="fa fa-fw fa-map-marker"></i>Madrid, Spain</div>
+                    <div class="aside-contact__items">
                         <a href="mailto:mario.rcantelar@upm.es"><i class="fa fa-fw fa-envelope"></i>mario.rcantelar@upm.es</a></div>
-                    <div class="aside-social__items capitalize">
-                        <a href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en" class="blue"><i class="fa fa-fw fa-google"></i>Google Scholar</a></div>
-                    <div class="aside-social__items capitalize">
-                        <a href="https://github.com/Mario-RC" class="blue"><i class="fa fa-fw fa-github"></i>GitHub</a></div>
+                </div>
+                <div class="aside-social-media">
+                    <div class="aside-social-media__items">
+                        <a href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en"><i class="fa fa-fw fa-google"></i>Google Scholar</a></div>
+                    <div class="aside-social-media__items">
+                        <a href="https://github.com/Mario-RC"><i class="fa fa-fw fa-github"></i>GitHub</a></div>
                 </div>
             </aside>
-            <article class="site-layout">
+            <article class="site-layout site-layout-home">
                 <section class="introduction">
                     <p>I'm a Research Engineer at <a href="https://www.car.upm-csic.es/">Centre for Automatic and Robotics (CAR UPM-CSIC)</a>, under <a href="https://www.car.upm-csic.es/authors/cap-fernando-matia-espada/">Fernando Matía's</a> and <a href="http://www-gth.die.upm.es/~lfdharo/index_en.php">Luis Fernando D'Haro's</a> supervision.</p>
                     <p>My research interests are NLP and Dialogue Management (e.g., sentiment analysis and generative conversational agents).</p>
@@ -102,19 +104,17 @@
             </article>
         </div>
     </main>
-    <footer class="site-footer">
-    </footer>
+    <!--<footer class="site-footer"></footer>-->
     <section class="mobile-menu">
         <header class="mobile-menu__header">
             <span></span>
-            <h2 class="site-title"><b>Menu</b></h2>
-            <a href="#" class="trigger-menu"><i class="fa fa-close"></i></a>
+            <h2 class="site-title"><b>MENU</b></h2>
+            <a href="#" class="trigger-menu"><i class="fa fa-fw fa-close"></i></a>
         </header>
         <nav class="mobile-menu__navigation">
             <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-            <a href="research.html"><i class="fa fa-fw fa-search"></i>Research</a>
+            <a href="blog.html"><i class="fa fa-fw fa-search"></i>Blog</a>
             <a href="about.html"><i class="fa fa-fw fa-user"></i>About</a>
-            
         </nav>
     </section>
     <script src="assets/js/app.js"></script>
