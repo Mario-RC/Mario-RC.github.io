@@ -238,26 +238,26 @@ body{
     .site-aside{
         position: static;
     }
-    .aside-profile > a{
-        display: flex;
-        justify-content: center;
-    }
-    .aside-profile img{
-        max-width: 25%;
-    }
-    .aside-profile > p{
-        text-align: center;
-    }
-    .aside-social-media{
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-    }
-    .aside-contact{
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-    }
+        .aside-profile{
+            text-align: center;
+        }
+        .aside-profile > a{
+            display: flex;
+            justify-content: center;
+        }
+        .aside-profile img{
+            max-width: 25%;
+        }
+        .aside-contact{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        .aside-social-media{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
 }
 
 /* LAYOUT */
