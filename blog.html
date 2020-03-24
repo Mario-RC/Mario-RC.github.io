@@ -6,7 +6,10 @@
     <title>Mario R-C</title><link rel="icon" href="assets/img/logo.png">
     <!--<link rel="canonical" href="https://mario.rcantelar.com/">-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--CSS Style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Font-Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -23,18 +26,20 @@
             <h1 class="site-title"><a href="index.html">Mario Rodríguez-Cantelar</a></h1>
             <nav class="site-navigation">
                 <div class="menu">
-                    <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-                    <a href="blog.html"><i class="fa fa-fw fa-search"></i>Blog</a>
-                    <a href="about.html"><i class="fa fa-fw fa-user"></i>About</a>
+                    <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
+                    <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+                    <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+                    <a onclick="toggleDark()" href="#"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
                 </div>
-                <a class="btn-menu trigger-menu" ><i class="fa fa-fw fa-bars"></i></a>
+                <a class="btn-menu trigger-menu" ><i class="fas fa-fw fa-bars"></i></a>
             </nav>
-        </div>       
+        </div>
     </header>
     <main class="site-main site-main-blog">
         <div class="wrapper">
             <article class="site-layout site-layout-blog">
-                <section class="introduction">
+                <section class="biography">
+                    <h4>Biography</h4>
                     <p>I'm a Research Engineer at <a href="https://www.car.upm-csic.es/">Centre for Automatic and Robotics (CAR UPM-CSIC)</a>, under <a href="https://www.car.upm-csic.es/authors/cap-fernando-matia-espada/">Fernando Matía's</a> and <a href="http://www-gth.die.upm.es/~lfdharo/index_en.php">Luis Fernando D'Haro's</a> supervision.</p>
                     <p>My research interests are NLP and Dialogue Management (e.g., sentiment analysis and generative conversational agents).</p>
                 </section>
@@ -90,21 +95,25 @@
             <div class="footer-col-1">
                 <div class="footer-contact">
                     <div class="footer-contact__items">
-                        <i class="fa fa-fw fa-user"></i>Mario Rodríguez-Cantelar</div>
+                        <i class="fas fa-fw fa-user"></i>Mario Rodríguez-Cantelar</div>
                     <div class="footer-contact__items">
-                        <a href="mailto:mario.rcantelar@upm.es"><i class="fa fa-fw fa-envelope"></i>mario.rcantelar@upm.es</a></div>
+                        <a href="mailto:mario.rcantelar@upm.es"><i class="fas fa-fw fa-envelope"></i>mario.rcantelar@upm.es</a></div>
                 </div>
             </div>
             <div class="footer-col-2">
                 <div class="footer-social-media">
                     <div class="footer-social-media__items">
-                        <a href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en"><i class="fa fa-fw fa-google"></i>Google Scholar</a></div>
+                        <a href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en"><i class="fab fa-fw fa-google"></i>Google Scholar</a></div>
                     <div class="footer-social-media__items">
-                        <a href="https://github.com/Mario-RC"><i class="fa fa-fw fa-github"></i>Mario-RC</a></div>
+                        <a href="https://github.com/Mario-RC"><i class="fab fa-fw fa-github"></i>Mario-RC</a></div>
                 </div>
             </div>
             <div class="footer-col-3">
-                <p>Research Engineer at <a href="https://www.car.upm-csic.es/">CAR UPM-CSIC</a>.</p>
+                <div class="footer-location">
+                    <i class="fas fa-fw fa-university"></i><a href="#" class="institution">Universidad Politécnica de Madrid</a></div>
+                <div class="footer-location">
+                    <i class="fas fa-fw fa-map-marker-alt"></i>Madrid, Spain</div>
+                </div>
             </div>
         </div>
     </footer>
@@ -112,12 +121,13 @@
         <header class="mobile-menu__header">
             <span></span>
             <h2 class="site-title"><b>MENU</b></h2>
-            <a href="#" class="trigger-menu"><i class="fa fa-fw fa-close"></i></a>
+            <a href="#" class="trigger-menu"><i class="fas fa-fw fa-times"></i></a>
         </header>
         <nav class="mobile-menu__navigation">
-            <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-            <a href="blog.html"><i class="fa fa-fw fa-search"></i>Blog</a>
-            <a href="about.html"><i class="fa fa-fw fa-user"></i>About</a>
+            <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
+            <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+            <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+            <a onclick="toggleDark()" href="#"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
         </nav>
     </section>
     <script src="assets/js/app.js"></script>
