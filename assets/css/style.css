@@ -207,6 +207,7 @@ body{
         .aside-profile img{
             max-width: 35%; 
             border-radius: 50%;
+            margin-bottom: 16px;
         }
         .aside-profile b{
             font-weight: bold;
