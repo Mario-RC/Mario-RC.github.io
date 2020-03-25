@@ -147,7 +147,10 @@ body{
             display: none;
         }
         .site-navigation a:hover{
-            text-decoration: underline;
+            text-decoration: none;
+        }
+        .site-navigation i:hover{
+            text-decoration: none;
         }
 @media (max-width: 800px){
     .menu{
@@ -199,6 +202,9 @@ body{
         flex-flow: column;
         margin-bottom: 16px;
     }   
+        .aside-profile a{
+            padding-left: 4px;
+        }
         .aside-profile img{
             max-width: 35%;
             border-radius: 50%;
@@ -225,7 +231,7 @@ body{
     }
     .aside-social-media a:hover{
         color: #0039cb;
-        text-decoration: underline;
+        text-decoration: none;
     }
     .aside-social-media i{
         margin-right: 4px;
@@ -242,9 +248,10 @@ body{
     .site-aside{
         text-align: center;
     }
-        .aside-profile > a{
+        .aside-profile a{
             display: flex;
             justify-content: center;
+            padding-left: 0px;
         }
         .aside-profile img{
             max-width: 35%;
@@ -282,7 +289,7 @@ body{
         color: #0039cb;
     }
     .biography a:hover{
-        text-decoration: underline;
+        text-decoration: none;
     }
     .biography p{
         margin-bottom: 16px;
@@ -468,7 +475,7 @@ body{
 .mobile-menu__header {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+    align-items: center;
     padding: 16px;
     
     border-bottom: solid 1px #e8e8e8;
@@ -491,7 +498,10 @@ body{
     margin: 16px 0;
 }
     .mobile-menu__navigation a:hover{
-        text-decoration: underline;
+        text-decoration: none;
+    }
+    .mobile-menu__navigation i:hover{
+        text-decoration: none;
     }
 
 /* DARK-MODE */
