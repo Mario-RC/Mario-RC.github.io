@@ -48,7 +48,7 @@ a {
 	color: inherit;
 	text-decoration: inherit;
 }
-/* GLOBALS (clases genericas) */
+/* GLOBALS (generic classes) */
 html, body {
 	min-height: 100vh;
     text-size-adjust: none;
@@ -262,7 +262,7 @@ body{
             display: flex;
         }
         .aside-profile img{
-            max-width: 30%;
+            max-width: 35%;
         }
 }
 
