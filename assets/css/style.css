@@ -48,7 +48,7 @@ a {
 	color: inherit;
 	text-decoration: inherit;
 }
-/* GLOBALS (clases genericas */
+/* GLOBALS (clases genericas) */
 html, body {
 	min-height: 100vh;
     text-size-adjust: none;
@@ -69,7 +69,6 @@ img {
 
 body{
     color: black;
-
 }
 .wrapper {
     margin: 0 auto; /* 1 */
@@ -205,6 +204,9 @@ body{
         .aside-profile a{
             padding-left: 4px;
         }
+        .aside-profile a:nth-child(2){
+            display: none;
+        }
         .aside-profile img{
             max-width: 35%;
             border-radius: 50%;
@@ -253,8 +255,14 @@ body{
             justify-content: center;
             padding-left: 0px;
         }
+        .aside-profile a:nth-child(1){
+            display: none;
+        }
+        .aside-profile a:nth-child(2){
+            display: flex;
+        }
         .aside-profile img{
-            max-width: 35%;
+            max-width: 30%;
         }
 }
 
@@ -343,6 +351,14 @@ body{
                 font-size: 14px;
                 margin: 0px;
             }
+            .interest i{
+                margin-right: 4px;
+                font-size: 10px;
+                vertical-align: center;
+                position: relative;
+                bottom: 1.5px;
+                animation-duration: 5s;
+            }
         .education {
             grid-column: 2/3;
         }
@@ -358,13 +374,26 @@ body{
             }
             .education i{
                 margin-right: 4px;
+                vertical-align: center;
             }
                 .course{
                     font-size: 14px;
+                    color: inherit;
                 }
-                .institution{
+                .course a:hover{
+                    text-decoration: none;
+                    color: #2c2c2c;
+                }
+                .institution a{
                     font-size: 12px;
+                    color: #828282;
                 }
+                .institution a:hover{
+                    color: #727272;
+                    text-decoration: none;
+                }
+
+
 @media (max-width: 800px){
     .site-layout > .wrapper{
         grid-template-columns: 2fr 3fr;
@@ -505,6 +534,9 @@ body{
     }
 
 /* DARK-MODE */
+.dark-mode .body{
+    color: #fcfcf7;
+}
 .dark-mode .site-header{
     background-color: #1d1f27;
     color: #fcfcf7;
@@ -513,6 +545,10 @@ body{
     background-color: #272935;
     color: #fcfcf7;
 }
+    .dark-mode .course a:hover{
+        text-decoration: none;
+        color: #ececec;
+    }
 .dark-mode .site-footer{
     background-color: #272935;
     color: #fcfcf7;

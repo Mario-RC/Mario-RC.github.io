@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario R-C</title><link rel="icon" href="assets/img/logo.png">
-    <!--<link rel="canonical" href="https://mario.rcantelar.com/">-->
+    <!--  CSS Style -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google Analytics -->
+    <!--  Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!--  Open Graph Description META Tags -->
+    <meta property="og:title" content="Mario Rodríguez-Cantelar">
+    <meta property="og:description" content="My great personal page.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mario-rc.github.io/blog.html">
+    <meta property="og:image" content="https://mario-rc.github.io/assets/img/og.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mario Rodríguez-Cantelar">
+    <meta name="twitter:description" content="My great personal page.">
+    <meta name="twitter:image" content="assets/img/og.png">
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="Mario Rodríguez-Cantelar">
+    <meta name="twitter:image:alt" content="My great personal page">
+    <!--  Required for Analytics -->
+    <meta property="fb:app_id" content="203555734391977">
+    <meta name="twitter:site" content="@Mario_RC">
+
+    <!--  Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -16,43 +37,31 @@
         ga('create', 'UA-226264968-1', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <title>Mario R-C</title><link rel="icon" href="assets/img/logo.png">
+    <link rel="canonical" href="https://mario-rc.github.io/blog">
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrapper">       
-            <h1 class="site-title"><a href="index.html">Mario Rodríguez-Cantelar</a></h1>
+    <header class="site-header site-header-blog">
+        <div class="wrapper">
+            <div class="site-title"><a href="index.html">Mario Rodríguez-Cantelar</a></div>
             <nav class="site-navigation">
                 <div class="menu">
-                    <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-                    <a href="blog.html"><i class="fa fa-fw fa-search"></i>Blog</a>
-                    <a href="about.html"><i class="fa fa-fw fa-user"></i>About</a>
+                    <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
+                    <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+                    <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+                    <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
                 </div>
-                <a class="btn-menu trigger-menu" ><i class="fa fa-fw fa-bars"></i></a>
+                <a class="btn-menu trigger-menu" ><i class="fas fa-fw fa-bars"></i></a>
             </nav>
-        </div>       
+        </div>
     </header>
-    <main class="site-main">
+    <main class="site-main site-main-blog">
         <div class="wrapper">
-            <aside class="site-aside">
-                <div class="aside-profile">
-                    <!--<a href="https://www.instagram.com/mariorc280/" target="_blank" title="Instagram"></a>-->
-                    <a><img alt="Mario Rodríguez-Cantelar" src="assets/img/profile.jpg"/></a>
-                    <p><b>MARIO</b><span>RODRÍGUEZ-CANTELAR</span></p>
-                </div>
-                <div class="aside-social">
-                    <div class="aside-social__items capitalize">
-                        <a href="#"><i class="fa fa-fw fa-map-marker"></i>Madrid, Spain</a></div>
-                    <div class="aside-social__items">
-                        <a href="mailto:mario.rcantelar@upm.es"><i class="fa fa-fw fa-envelope"></i>mario.rcantelar@upm.es</a></div>
-                    <div class="aside-social__items capitalize">
-                        <a href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en" class="blue"><i class="fa fa-fw fa-google"></i>Google Scholar</a></div>
-                    <div class="aside-social__items capitalize">
-                        <a href="https://github.com/Mario-RC" class="blue"><i class="fa fa-fw fa-github"></i>GitHub</a></div>
-                </div>
-            </aside>
-            <article class="site-layout">
-                <section class="introduction">
-                    <p>I'm a Research Engineer at <a href="https://www.car.upm-csic.es/">Centre for Automatic and Robotics (CAR UPM-CSIC)</a>, under <a href="https://www.car.upm-csic.es/authors/cap-fernando-matia-espada/">Fernando Matía's</a> and <a href="http://www-gth.die.upm.es/~lfdharo/index_en.php">Luis Fernando D'Haro's</a> supervision.</p>
+            <article class="site-layout site-layout-blog">
+                <section class="biography">
+                    <h4>Biography</h4>
+                    <p>I'm a Research Engineer at <a href="https://es.wikipedia.org/wiki/Centro_de_Autom%C3%A1tica_y_Rob%C3%B3tica">Centre for Automatic and Robotics (CAR UPM-CSIC)</a>, under <a href="https://www.car.upm-csic.es/authors/cap-fernando-matia-espada/">Fernando Matía's</a> and <a href="http://www-gth.die.upm.es/~lfdharo/index_en.php">Luis Fernando D'Haro's</a> supervision.</p>
                     <p>My research interests are NLP and Dialogue Management (e.g., sentiment analysis and generative conversational agents).</p>
                 </section>
                 <section class="updates">
@@ -103,17 +112,43 @@
         </div>
     </main>
     <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-col-1">
+                <div class="footer-contact">
+                    <div class="footer-contact__items">
+                        <i class="fas fa-fw fa-user"></i>Mario Rodríguez-Cantelar</div>
+                    <div class="footer-contact__items">
+                        <a href="mailto:mario.rcantelar@upm.es"><i class="fas fa-fw fa-envelope"></i>mario.rcantelar@upm.es</a></div>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <div class="footer-social-media">
+                    <div class="footer-social-media__items">
+                        <a href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en"><i class="fab fa-fw fa-google"></i>Google Scholar</a></div>
+                    <div class="footer-social-media__items">
+                        <a href="https://github.com/Mario-RC"><i class="fab fa-fw fa-github"></i>Mario-RC</a></div>
+                </div>
+            </div>
+            <div class="footer-col-3">
+                <div class="footer-location">
+                    <i class="fas fa-fw fa-university"></i><a href="http://www.upm.es/internacional" class="institution">Universidad Politécnica de Madrid</a></div>
+                <div class="footer-location">
+                    <i class="fas fa-fw fa-map-marker-alt"></i><a href="https://en.wikipedia.org/wiki/Madrid">Madrid, Spain</a></div>
+                </div>
+            </div>
+        </div>
     </footer>
     <section class="mobile-menu">
         <header class="mobile-menu__header">
             <span></span>
-            <h2 class="site-title"><b>Menu</b></h2>
-            <a href="#" class="trigger-menu"><i class="fa fa-fw fa-close"></i></a>
+            <h2 class="site-title"><b>MENU</b></h2>
+            <a href="#" class="trigger-menu"><i class="fas fa-fw fa-times"></i></a>
         </header>
         <nav class="mobile-menu__navigation">
-            <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-            <a href="blog.html"><i class="fa fa-fw fa-search"></i>Blog</a>
-            <a href="about.html"><i class="fa fa-fw fa-user"></i>About</a>
+            <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
+            <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+            <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+            <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
         </nav>
     </section>
     <script src="assets/js/app.js"></script>
