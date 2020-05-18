@@ -87,6 +87,9 @@ document.getElementById("timerClock").innerHTML = `
   )}</span>
 </div>
 `;
+document.getElementById("timerTab").innerHTML = formatTime(
+  timeLeft
+);
 
 function calculateTimeFraction() {
   const rawTimeFraction = timeLeft / timeLimit;
@@ -154,6 +157,9 @@ function printTimer(timeLeft, timeLimit) {
   );
   setCircleDasharray();
   setRemainingPathColor(timeLeft, timeLimit);
+  document.getElementById("timerTab").innerHTML = formatTime(
+    timeLeft
+  );
 }
 
 function calculateTimeLeft(timeLimit, timePassed) {

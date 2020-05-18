@@ -610,11 +610,11 @@ body{
     color: #fcfcf7;
 }
 
-.dark-mode  .site-layout-focus button{
+.dark-mode .site-layout-focus button{
     background-color: #272935;
     color: #fcfcf7;
 }
-.site-layout-focus button i:hover{
+.dark-mode .site-layout-focus button i:hover{
     color: #ececec;
 }
 
