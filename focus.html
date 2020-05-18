@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  CSS Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!--  Open Graph Description META Tags -->
+    <meta property="og:title" content="Mario Rodríguez-Cantelar">
+    <meta property="og:description" content="My great personal page.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mario-rc.github.io/blog.html">
+    <meta property="og:image" content="https://mario-rc.github.io/assets/img/og.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mario Rodríguez-Cantelar">
+    <meta name="twitter:description" content="My great personal page.">
+    <meta name="twitter:image" content="assets/img/og.png">
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="Mario Rodríguez-Cantelar">
+    <meta name="twitter:image:alt" content="My great personal page">
+    <!--  Required for Analytics -->
+    <meta property="fb:app_id" content="203555734391977">
+    <meta name="twitter:site" content="@Mario_RC">
+
+    <!--  Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-226264968-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <title>Mario R-C</title><link rel="icon" href="assets/img/logo.png">
+    <link rel="canonical" href="https://mario-rc.github.io/blog">
+</head>
+<body>
+    <header class="site-header site-header-blog">
+        <div class="wrapper">
+            <div class="site-title"><a href="index.html">Mario Rodríguez-Cantelar</a></div>
+            <nav class="site-navigation">
+                <div class="menu">
+                    <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
+                    <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+                    <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+                    <a href="focus.html"><i class="fas fa-stopwatch-20"></i>Focus</a>
+                    <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
+                </div>
+                <a class="btn-menu trigger-menu" ><i class="fas fa-fw fa-bars"></i></a>
+            </nav>
+        </div>
+    </header>
+    <main class="site-main site-main-focus">
+        <div class="wrapper">
+            <article class="site-layout site-layout-focus">
+                <section class="timer">
+                    <h4>Focus Timer</h4>
+                    <p>Pomodoro technique</p>
+                    
+                    <label for="focusName">Focus Time:</label>
+                    <input type="number" id="focusTime" name="focusName" value="25">min.<br>
+                    <label for="restName">Rest Time:</label>
+                    <input type="number" id="restTime" name="restName" value="5">min.
+
+                    <div id="timerClock"></div>
+                    <button id="start">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="pause">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button id="stop">
+                        <i class="fas fa-stop"></i>
+                    </button>
+                    <audio id="times-up-audio">
+                        <source src="assets/audio/harp-strumming.mp3" type="audio/mpeg">
+                    </audio>
+                    <!-- <a href="#" onclick="resetTimer()"><i class="fas fa-undo-alt"></i></a> -->
+                    <!-- <a href="#" onclick="initTimer()"><i class="fas fa-hourglass-half"></i></a> -->
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-col-1">
+                <div class="footer-contact">
+                    <div class="footer-contact__items">
+                        <i class="fas fa-fw fa-user"></i>Mario Rodríguez-Cantelar</div>
+                    <div class="footer-contact__items">
+                        <a href="mailto:mario.rcantelar@upm.es"><i class="fas fa-fw fa-envelope"></i>mario.rcantelar@upm.es</a></div>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <div class="footer-social-media">
+                    <div class="footer-social-media__items">
+                        <a href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en"><i class="fab fa-fw fa-google"></i>Google Scholar</a></div>
+                    <div class="footer-social-media__items">
+                        <a href="https://github.com/Mario-RC"><i class="fab fa-fw fa-github"></i>Mario-RC</a></div>
+                </div>
+            </div>
+            <div class="footer-col-3">
+                <div class="footer-location">
+                    <a href="http://www.upm.es/internacional" class="institution"><i class="fas fa-fw fa-university"></i>Universidad Politécnica de Madrid</a></div>
+                <div class="footer-location">
+                    <a href="https://www.esmadrid.com/en"><i class="fas fa-fw fa-map-marker-alt"></i>Madrid, Spain</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="mobile-menu">
+        <header class="mobile-menu__header">
+            <span></span>
+            <h2 class="site-title"><b>MENU</b></h2>
+            <a href="#" class="trigger-menu"><i class="fas fa-fw fa-times"></i></a>
+        </header>
+        <nav class="mobile-menu__navigation">
+            <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
+            <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+            <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+            <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
+        </nav>
+    </section>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
