@@ -435,7 +435,7 @@ body{
     }
     .site-layout-focus button{
         cursor: pointer;
-        background: #fff;
+        background: #fcfcf7;
         color: #828282;
         border: none;
         outline-style: none;
