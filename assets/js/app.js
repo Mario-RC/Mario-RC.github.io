@@ -21,13 +21,13 @@ function toggleIcon(x) {
 }
 
 // TIMER //
-//var focusTime = document.getElementById("focusTime").value;
-//var restTime = document.getElementById("restTime").value;
-
-let timeLimit = document.getElementById("focusTime").value*60;
+let FocusTime = document.getElementById("focusTime").value*60;
+let RestTime = document.getElementById("restTime").value*60;
+let timeLimit = FocusTime;
 let timeLeft = timeLimit;
 let timePassed = 0;
 let timerInterval = null;
+let onTimesUpChecks = 0;
 let onTimesUpFlag = 0;
 let audioCounter = 3;
 
@@ -50,10 +50,19 @@ const COLOR_CODES = {
 };
 let remainingPathColor = COLOR_CODES.info.color;
 
-var popupAudioPlayer = document.getElementById('times-up-audio');
 var startBtn = document.getElementById('start');
 var pauseBtn = document.getElementById('pause');
 var stopBtn = document.getElementById('stop');
+var popupAudioPlayer = document.getElementById('times-up-audio');
+
+var check1 = document.getElementById('check1');
+var check2 = document.getElementById('check2');
+var check3 = document.getElementById('check3');
+var check4 = document.getElementById('check4');
+check1.style.display = 'none';
+check3.style.display = 'none';
+check4.style.display = 'none';
+check2.style.display = 'none';
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
@@ -166,8 +175,32 @@ function calculateTimeLeft(timeLimit, timePassed) {
   return timeLeft = timeLimit - timePassed;
 }
 
+function displayIcon(onTimesUpChecks) {
+  if (onTimesUpChecks === 1) {
+    check1.style.display = "inline-flex";
+  }
+  else if (onTimesUpChecks === 2) {
+    check2.style.display = "inline-flex";
+  }
+  else if (onTimesUpChecks === 3) {
+     check3.style.display = "inline-flex";
+  }
+  else if (onTimesUpChecks === 4) {
+    check4.style.display = "inline-flex";
+  }
+  else {
+    check1.style.display = "none";
+    check2.style.display = "none";
+    check3.style.display = "none";
+    check4.style.display = "none";
+  }
+}
+
 function startTimer() {
-  timeLimit = document.getElementById("focusTime").value*60;
+  FocusTime = document.getElementById("focusTime").value*60;
+  RestTime = document.getElementById("restTime").value*60;
+  timeLimit = FocusTime;
+  startBtn.disabled = true;
   timerInterval = setInterval(() => {
 
     timeLeft = calculateTimeLeft(timeLimit, timePassed)
@@ -176,27 +209,42 @@ function startTimer() {
 
     stopBtn.addEventListener("click", function (event) {
       timePassed = 0;
-      timeLimit = document.getElementById("focusTime").value*60;
+      FocusTime = document.getElementById("focusTime").value*60;
+      RestTime = document.getElementById("restTime").value*60;
+      timeLimit = FocusTime;
       timeLeft = calculateTimeLeft(timeLimit, timePassed);
       printTimer(timeLeft, timeLimit);
       pauseTimer();
+      onTimesUpFlag = 0;
+      onTimesUpChecks = 0;
+      displayIcon(onTimesUpChecks);
+      startBtn.disabled = false;
     });
     
     pauseBtn.addEventListener("click", function (event) {
       pauseTimer();
+      startBtn.disabled = false;
     });
     
     if (timeLeft === 0) {
       timePassed = 0;
-      if (onTimesUpFlag === 0) {
-        timeLimit = document.getElementById("restTime").value*60;
-        onTimesUpFlag = 1;
-      }
-      else {
-        timeLimit = document.getElementById("focusTime").value*60;
-        onTimesUpFlag = 0;
-      }
       onTimesUpAudio();
+      if (onTimesUpFlag === 1) {
+        timeLimit = FocusTime;
+        onTimesUpFlag = 0;
+        if (onTimesUpChecks === 4) {
+          onTimesUpChecks = 0;
+        }
+      } else {
+        onTimesUpFlag = 1;
+        onTimesUpChecks += 1;
+        if (onTimesUpChecks === 4) {
+          timeLimit = RestTime*5;
+        } else {
+          timeLimit = RestTime;
+        }
+      }
+      displayIcon(onTimesUpChecks);
     }
 
   }, 1000);

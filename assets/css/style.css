@@ -100,6 +100,18 @@ body{
         background-color: #2a7ae2;
     }
 
+/* Hide Input Number Arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /* HEADER */
 .site-header-home{
     position: fixed;
@@ -116,9 +128,7 @@ body{
 .site-header{
     padding: 16px 0px;
     border-bottom: solid 1px #e8e8e8;
-
     background-color: #fcfcf7;
-
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -295,21 +305,22 @@ body{
 /* LAYOUT */
 .site-layout-home{
     grid-column: 2/3;
+    padding-top: 64px;
 }
 .site-layout-blog{
     grid-column: none;
+    padding-top: 64px;
 }
 .site-layout-about{
     grid-column: none;
+    padding-top: 64px;
 }
 .site-layout-focus{
     grid-column: none;
+    padding-top: 0px;
 }
 .site-layout{
     font-family: Helvetica, sans-serif;
-
-    padding-top: 64px;
-
     z-index: 6000;
 }
     .site-layout article{
@@ -432,6 +443,30 @@ body{
     .timer h4{
         font-size: 30px;
         margin-bottom: 8px;
+    }
+    .timer > .wrapper{
+        display: flex;
+        justify-content: center;
+        text-transform: none;
+    }
+        .set-focus-time{
+            display: flex;
+            flex-flow: column;
+        }
+        .set-rest-time{
+            display: flex;
+            flex-flow: column;
+        }
+    .timer > .wrapper input[type=number]{
+        width: 35%;
+        border: 2px solid #c0c0c0;
+        border-radius: 4px;
+        color: #fcfcf7;
+        background-color: #41B883;
+        padding: 4px 0px;
+        margin: 4px auto 16px auto;
+        font-size: 16px;
+        text-align: center;
     }
     .site-layout-focus button{
         cursor: pointer;
@@ -651,7 +686,7 @@ body{
   }
   
   .base-timer__path-remaining.green{
-    color: rgb(65, 184, 131);
+    color: #41B883;
   }
   
   .base-timer__path-remaining.orange{
