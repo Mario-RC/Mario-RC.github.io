@@ -1,4 +1,5 @@
 
+// MOBILE MENU //
 function mostrarMenuMobile(e) {
 	e.preventDefault();
 	mobileMenu.classList.toggle('is-visible')
@@ -11,6 +12,8 @@ for( var t of triggerMenu){
 	t.addEventListener('click', mostrarMenuMobile)
 }
 
+
+// DARK MODE //
 function toggleDark() {
 	var element = document.body;
 	element.classList.toggle("dark-mode");
@@ -19,6 +22,21 @@ function toggleDark() {
 function toggleIcon(x) {
 	x.classList.toggle("fa-sun");
 }
+
+
+// DROPDOWN LANGUAGE MENU //
+var dropdown = document.getElementsByClassName("btn-language");
+for (var tab = 0; tab < dropdown.length; tab++) {
+  dropdown[tab].addEventListener("click", function() {
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
 
 // TIMER //
 let FocusTime = document.getElementById("focusTime").value*60;
