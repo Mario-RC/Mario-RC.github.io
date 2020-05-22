@@ -34,8 +34,16 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-226264968-1', 'auto');
+        ga('create', 'UA-167408286-1', 'auto');
         ga('send', 'pageview');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167408286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-167408286-1');
     </script>
 
     <title id="timerTab"></title><link rel="icon" href="assets/img/logo.png">
@@ -49,8 +57,8 @@
                 <div class="menu">
                     <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
                     <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
-                    <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
                     <a href="focus.html"><i class="fas fa-stopwatch-20"></i>Focus</a>
+                    <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
                     <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
                 </div>
                 <a class="btn-menu trigger-menu" ><i class="fas fa-fw fa-bars"></i></a>
@@ -74,28 +82,26 @@
                         </div>
                     </div>
                     <div id="timerClock"></div>
-                    <button id="start">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button id="pause">
-                        <i class="fas fa-pause"></i>
-                    </button>
-                    <button id="stop">
-                        <i class="fas fa-stop"></i>
-                    </button>
-                    <audio id="times-up-audio">
-                        <source src="assets/audio/harp-strumming.mp3" type="audio/mpeg">
-                    </audio><br>
-                    <a href="#"><i id="check1" class="far fa-check-circle"></i></a>
-                    <a href="#"><i id="check2" class="far fa-check-circle"></i></a>
-                    <a href="#"><i id="check3" class="far fa-check-circle"></i></a>
-                    <a href="#"><i id="check4" class="far fa-check-circle"></i></a>
-                    <!-- <a href="#"><i id="check1" class="fas fa-check"></i></a> -->
-                    <!-- <a href="#"><i id="check2" class="far fa-check-circle"></i></a> -->
-                    <!-- <a href="#"><i id="check3" class="fas fa-check-circle"></i></a> -->
-                    <!-- <a href="#"><i id="check4" class="far fa-check-square"></i></a> -->
-                    <!-- <a href="#" onclick="resetTimer()"><i class="fas fa-undo-alt"></i></a> -->
-                    <!-- <a href="#" onclick="initTimer()"><i class="fas fa-hourglass-half"></i></a> -->
+                    <div class="control">
+                        <button id="start">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="pause">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button id="stop">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                        <audio id="times-up-audio">
+                            <source src="assets/audio/harp-strumming.mp3" type="audio/mpeg">
+                        </audio><br>
+                    </div>
+                    <div class="checkmarks">
+                        <i id="check1" class="far fa-check-circle"></i>
+                        <i id="check2" class="far fa-check-circle"></i>
+                        <i id="check3" class="far fa-check-circle"></i>
+                        <i id="check4" class="far fa-check-circle"></i>
+                    </div>
                 </section>
             </article>
         </div>
@@ -136,8 +142,8 @@
         <nav class="mobile-menu__navigation">
             <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
             <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
-            <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
             <a href="focus.html"><i class="fas fa-stopwatch-20"></i>Focus</a>
+            <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
             <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
         </nav>
     </section>

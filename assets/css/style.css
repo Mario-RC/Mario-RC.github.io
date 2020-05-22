@@ -468,7 +468,7 @@ input[type=number] {
         font-size: 16px;
         text-align: center;
     }
-    .site-layout-focus button{
+    .timer .control button{
         cursor: pointer;
         background: #fcfcf7;
         color: #828282;
@@ -476,11 +476,14 @@ input[type=number] {
         outline-style: none;
         padding: 8px;
     }
-    .site-layout-focus button i:hover{
-        color: #727272;
-        text-decoration: none;
+        .timer .control button i:hover{
+            color: #727272;
+            text-decoration: none;
+        }
+    .timer .checkmarks i{
+        cursor: auto;
+        padding: 16px 8px;
     }
-
 @media (max-width: 800px){
     .site-layout > .wrapper{
         grid-template-columns: 2fr 3fr;
@@ -593,7 +596,6 @@ input[type=number] {
 	justify-content: space-between;
     align-items: center;
     padding: 16px;
-    
     border-bottom: solid 1px #e8e8e8;
 }
 .mobile-menu__header .fa-times{
