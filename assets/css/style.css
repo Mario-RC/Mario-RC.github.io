@@ -176,7 +176,7 @@ input[type=number] {
                 .language:hover .dropdown-language{
                     display: block;
                 }
-                .language .btn-language{
+                .btn-language{
                     background-color: inherit;
                     cursor: pointer;
                     border: none;
@@ -682,7 +682,7 @@ input[type=number] {
 }
 .dark-mode .dropdown-language{
     background-color: #1d1f27;
-    box-shadow: 0px 4px 4px 0px #1f1f27;
+    box-shadow: none;
 }
 .dark-mode .dropdown-language a:hover{
     background-color: #272935;
