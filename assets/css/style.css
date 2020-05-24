@@ -730,21 +730,17 @@ input[type=number] {
     height: 300px;
     margin: 16px auto;
   }
-  
   .base-timer__svg{
     transform: scaleX(-1);
   }
-  
   .base-timer__circle{
     fill: none;
     stroke: none;
   }
-  
   .base-timer__path-elapsed{
     stroke-width: 7px;
     stroke: grey;
   }
-  
   .base-timer__path-remaining{
     stroke-width: 7px;
     stroke-linecap: round;
@@ -754,19 +750,15 @@ input[type=number] {
     fill-rule: nonzero;
     stroke: currentColor;
   }
-  
   .base-timer__path-remaining.green{
     color: #41B883;
   }
-  
   .base-timer__path-remaining.orange{
     color: orange;
   }
-  
   .base-timer__path-remaining.red{
     color: red;
   }
-  
   .base-timer__label{
     position: absolute;
     width: 300px;
