@@ -474,13 +474,29 @@ input[type=number] {
     }
     .timer h4{
         font-size: 30px;
-        margin-bottom: 8px;
+        margin-bottom: 32px;
     }
     .timer > .wrapper{
         display: flex;
         justify-content: center;
         text-transform: none;
     }
+    .timer > .wrapper select{
+        width: 100%;
+        border: 2px solid #c0c0c0;
+        border-radius: 4px;
+        color: #fcfcf7;
+        background-color: #41B883;
+        padding: 4px 0px;
+        margin: 4px auto 16px auto;
+        font-size: 16px;
+        text-align: center;
+        outline-style: none;
+    }
+        .set-tecnique-timer{
+            display: flex;
+            flex-flow: column;
+        }
         .set-focus-time{
             display: flex;
             flex-flow: column;
@@ -517,6 +533,42 @@ input[type=number] {
     .timer .checkmarks i{
         cursor: auto;
         padding: 16px 8px;
+    }
+    .techniques h4{
+        font-size: 20px;
+        margin-top: 48px;
+        margin-bottom: 24px;
+    }
+    .techniques .techniques-name{
+        color: #828282;
+    }
+    .techniques a:hover{
+        color: #727272;
+    }
+    .techniques ul{
+        margin-top: 8px;
+        margin-bottom: 48px;
+    }
+    .techniques li{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .techniques ol{
+        display: block;
+        margin-block-start: 8px;
+        margin-block-end: 8px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 16px;
+    }
+    .techniques .decimal{
+        list-style-type: decimal;
+    }
+    .techniques .disc{
+        list-style-type: disc;
+    }
+    .techniques p{
+        display: list-item;
     }
 @media (max-width: 800px){
     .site-layout > .wrapper{

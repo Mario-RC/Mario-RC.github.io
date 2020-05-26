@@ -62,15 +62,23 @@
             <article class="site-layout site-layout-focus">
                 <section class="timer">
                     <h4>Focus Timer</h4>
-                    <p>Pomodoro technique</p>
                     <div class="wrapper">
                         <div class="set-focus-time">
                             <label for="focusName">Focus Time</label>
-                            <input type="number" id="focusTime" name="focusName" value="25" max="120">
+                            <input type="number" id="focusTime" name="focusName" value="25" max="120" onchange="displayTechnique()">
+                        </div>
+                        <div class="set-tecnique-timer">
+                            <label for="techniqueName">Technique</label>
+                            <select id="technique" name="techniqueName" onchange="displayTimerTimes()">
+                                <option value="pomodoro" selected>Pomodoro</option>
+                                <option value="rule 52/17">Rule 52/17</option>
+                                <option value="ultradian">Ultradian</option>
+                                <option value="customize">Customize</option>
+                            </select>
                         </div>
                         <div class="set-rest-time">
                             <label for="restName">Rest Time</label>
-                            <input type="number" id="restTime" name="restName" value="5" max="30">
+                            <input type="number" id="restTime" name="restName" value="5" max="30" onchange="displayTechnique()">
                         </div>
                     </div>
                     <div id="timerClock"></div>
@@ -89,11 +97,70 @@
                         </audio><br>
                     </div>
                     <div class="checkmarks">
-                        <i id="check1" class="far fa-check-circle"></i>
-                        <i id="check2" class="far fa-check-circle"></i>
-                        <i id="check3" class="far fa-check-circle"></i>
-                        <i id="check4" class="far fa-check-circle"></i>
+                        <i id="check1" class="fas fa-hourglass-start"></i>
+                        <i id="check2" class="fas fa-hourglass-start"></i>
+                        <i id="check3" class="fas fa-hourglass-start"></i>
+                        <i id="check4" class="fas fa-hourglass-start"></i>
                     </div>
+                </section>
+                <section class="techniques">
+                    <h4>Timer technique</h4>
+                    <article>
+                        <section>
+                            <h5 class="techniques-name">Pomodoro (by <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Francesco Cirillo</a>)</h5>
+                            <ul>
+                                <li>
+                                    <ol class="decimal">
+                                        <p>Decide on and organize four tasks to be done.</p>
+                                        <p>Set the focus time (traditionally to 25 minutes).</p>
+                                        <p>Work on the task.</p>
+                                        <p>End work when the timer rings (a pomodoro checkmark will appear).</p>
+                                        <p>If you have fewer than four checkmarks, take a short break (rest time, traditionally 5 minutes), then go to step 2.</p>
+                                        <p>After four pomodoros checkmarks, take a longer break (five times rest time), then go to step 1.</p>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h5 class="techniques-name">The Rule of 52 and 17 (by <a href="https://www.themuse.com/advice/the-rule-of-52-and-17-its-random-but-it-ups-your-productivity">Daily Muse</a>)</h5>
+                            <ul>
+                                <li>
+                                    <ol class="disc">
+                                        <p>Set up 52 minutes of work followed by a 17-minute break.
+                                        <p>To make the most of your breaks in order to get the most out of your working sprints.</p>
+                                        <p>Step away from the computer (and the smartphone).</p>
+                                        <p>Do some little exercises, or step outside and take a walk around to clear your mind and get your body moving.</p>
+                                        <p>Chat with some of your co-workers (not about work).</p>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h5 class="techniques-name">Ultradian rhythms (by <a href="https://en.wikipedia.org/wiki/Basic_rest%E2%80%93activity_cycle">Nathaniel Kleitman</a>)</h5>
+                            <ul>
+                                <li>
+                                    <ol class="disc">
+                                        <p>Work on your most important task for 90 minutes.</p>
+                                        <p>Take a 20-minute healing break.</p>
+                                        <p>Break up those 60-90 minute periods using 30 minute Pomodoro sessions (25 minutes of focus, 5 minutes of rest).</p>
+                                        <p>The break could include taking a walk, meditating, a short nap, conversations with a friend, etc.</p>
+                                        <p> Your goal is to let your brain turn off.</p>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h5 class="techniques-name">Customize (by <a href="https://maps.app.goo.gl/jPLQJs6XQSjVcNAAA">You</a>)</h5>
+                            <ul>
+                                <li>
+                                    <ol class="disc">
+                                        <p>Maybe it feels like just not the right amount of time?</p>
+                                        <p>Try different combinations and continue to test and learn to determine your optimal focus cycle lengths.</p>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
                 </section>
             </article>
         </div>
