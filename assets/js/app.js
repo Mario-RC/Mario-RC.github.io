@@ -465,6 +465,15 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+// Add a new list item when clicking enter
+var inputEnter = document.getElementById("todo-input");
+inputEnter.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   newtoDoInput();
+  }
+});
+
 // Create a new list item when clicking on the "Add" button
 function newtoDoInput() {
   var li = document.createElement("li");

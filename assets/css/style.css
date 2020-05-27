@@ -826,7 +826,7 @@ input[type=number] {
 /* Include the padding and border in an element's total width and height */
 .todo {
     width: 45%;
-    margin: 16px auto;
+    margin: 64px auto;
 }
     /* Style the todo-header */
     .todo .todo-header {
@@ -879,7 +879,8 @@ input[type=number] {
     .todo .close {
         position: relative;
         float: right;
-        padding: 0px 8px;
+        margin: 0px 9px;
+        padding: 0px 7px;
         border-radius: 50%;
         }
         .todo .close:hover {
@@ -895,7 +896,7 @@ input[type=number] {
     .todo ul li {
         cursor: pointer;
         position: relative;
-        padding: 16px 8px 16px 45px;
+        padding: 16px 8px 16px 29px;
         list-style-type: none;
         background: #e0e0e0;
         font-size: 14px;
