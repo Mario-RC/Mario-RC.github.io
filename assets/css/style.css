@@ -821,3 +821,124 @@ input[type=number] {
     justify-content: center;
     font-size: 48px;
   }
+
+/* TO-DO LIST */
+/* Include the padding and border in an element's total width and height */
+.todo {
+    width: 45%;
+    margin: 16px auto;
+}
+    /* Style the todo-header */
+    .todo .todo-header {
+        background-color: #f44336;
+        padding: 8px 16px;
+        color: #fcfcf7;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      /* Clear floats after the todo-header */
+      .todo .todo-header:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the input */
+      .todo input{
+        padding: 12.5px;
+        width: 73%;
+        border: none;
+        outline-style: none;
+        border-radius: 16px;
+        float: left;
+        font-size: 14px;
+      }
+      /* Style the "Add" button */
+      .todo .addBtn {
+        padding: 10px;
+        width: 23%;
+        background: #d9d9d9;
+        color: #727272;
+        float: right;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+        border: none;
+        outline-style: none;
+        border-radius: 16px;
+      }
+        .todo .addBtn:hover {
+            background-color: #bbb;
+        }
+    .todo h4 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    /* Style the close button */
+    .todo .close {
+        position: relative;
+        float: right;
+        padding: 0px 8px;
+        border-radius: 50%;
+        }
+        .todo .close:hover {
+            background-color: #f44336;
+            color: #fcfcf7;
+        }
+    /* Remove margins and padding from the list */
+    .todo ul {
+    margin: 0px;
+    padding: 0px;
+    }
+    /* Style the list items */
+    .todo ul li {
+        cursor: pointer;
+        position: relative;
+        padding: 16px 8px 16px 45px;
+        list-style-type: none;
+        background: #e0e0e0;
+        font-size: 14px;
+        transition: 0.2s;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        /* make the list items unselectable */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+        .todo ul li:last-child {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        
+        /* Set all odd list items to a different color (zebra-stripes) */
+        .todo ul li:nth-child(odd) {
+            background: #f3f3f3;
+        }
+        
+        /* Darker background-color on hover */
+        .todo ul li:hover {
+            background: #b0b0b0;
+        }
+        /* When clicked on, add a background color and strike out text */
+        .todo ul li.checked {
+            color: #fcfcf7;
+            background: #808080;
+            text-decoration: line-through;
+        }
+        /* Add a "checked" mark when clicked on */
+        .todo ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fcfcf7;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+  
