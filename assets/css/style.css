@@ -111,6 +111,19 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+/* Firefox */
+input[type=text]::placeholder {
+    color: gray;
+    opacity: 1;
+}
+/* Internet Explorer 10-11 */
+input[type=text]:-ms-input-placeholder {
+    color: gray;
+}
+/* Microsoft Edge */
+input[type=text]::-ms-input-placeholder {
+    color: gray;
+}
 
 /* HEADER */
 .site-header-home{
@@ -765,6 +778,46 @@ input[type=number] {
 .dark-mode .site-layout-focus button{
     outline-style: none;
 }
+.dark-mode .site-layout-focus .todo-header {
+    background-color: #96271f;
+}
+.dark-mode .site-layout-focus .todo input[type=text]{
+    color: #fcfcf7;
+    background-color: #272935;
+}
+.dark-mode .site-layout-focus .todo input[type=text]::placeholder {
+    color: #fcfcf7;
+    opacity: 1;
+}
+.dark-mode .site-layout-focus .todo input[type=text]:-ms-input-placeholder {
+    color: #fcfcf7;
+}
+.dark-mode .site-layout-focus .todo input[type=text]::-ms-input-placeholder {
+    color: #fcfcf7;
+}
+.dark-mode .site-layout-focus .todo .addBtn {
+    color: #fcfcf7;
+    background: #272935;
+}
+.dark-mode .site-layout-focus .todo .addBtn:hover {
+    background-color: #1d1f27;
+}
+.dark-mode .site-layout-focus .todo .close:hover {
+    background-color: #96271f;
+    color: #272935;
+}
+.dark-mode .site-layout-focus .todo ul li{
+    background-color: #343747;
+}
+.dark-mode .site-layout-focus .todo ul li:nth-child(odd) {
+    background: #36394e;
+}
+.dark-mode .site-layout-focus .todo ul li:hover {
+    background: #1d1e27;
+}
+.dark-mode .site-layout-focus .todo ul li.checked {
+    background: #1d1e27;
+}
 .dark-mode .mobile-menu__header {
     background-color: #1d1f27;
 }
@@ -836,62 +889,64 @@ input[type=number] {
         text-align: center;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-      }
-      /* Clear floats after the todo-header */
-      .todo .todo-header:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      /* Style the input */
-      .todo input{
-        padding: 12.5px;
-        width: 73%;
-        border: none;
-        outline-style: none;
-        border-radius: 16px;
-        float: left;
-        font-size: 14px;
-      }
-      /* Style the "Add" button */
-      .todo .addBtn {
-        padding: 10px;
-        width: 23%;
-        background: #d9d9d9;
-        color: #727272;
-        float: right;
-        text-align: center;
-        font-size: 14px;
-        cursor: pointer;
-        transition: 0.3s;
-        border: none;
-        outline-style: none;
-        border-radius: 16px;
-      }
-        .todo .addBtn:hover {
-            background-color: #bbb;
-        }
-    .todo h4 {
-        font-size: 20px;
-        margin-bottom: 8px;
     }
-    /* Style the close button */
-    .todo .close {
-        position: relative;
-        float: right;
-        margin: 0px 9px;
-        padding: 0px 7px;
-        border-radius: 50%;
+        /* Clear floats after the todo-header */
+        .todo .todo-header:after {
+            content: "";
+            display: table;
+            clear: both;
         }
-        .todo .close:hover {
-            background-color: #f44336;
-            color: #fcfcf7;
+        /* Style the input */
+        .todo input[type=text]{
+            padding: 12.5px;
+            width: 73%;
+            border: none;
+            outline-style: none;
+            border-radius: 16px;
+            float: left;
+            font-size: 14px;
+            color: #727272;
+            background-color: #fcfcf7;
         }
+        /* Style the "Add" button */
+        .todo .addBtn {
+            padding: 10px;
+            width: 23%;
+            background: #e0e0e0;
+            color: gray;
+            float: right;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+            outline-style: none;
+            border-radius: 16px;
+        }
+            .todo .addBtn:hover {
+                background-color: #bbb;
+            }
+        .todo h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        /* Style the close button */
+        .todo .close {
+            position: relative;
+            float: right;
+            margin: 0px 9px;
+            padding: 0px 7px;
+            border-radius: 50%;
+            }
+            .todo .close:hover {
+                background-color: #f44336;
+                color: #fcfcf7;
+            }
     /* Remove margins and padding from the list */
     .todo ul {
-    margin: 0px;
-    padding: 0px;
-    }
+        margin: 0px;
+        padding: 0px;
+        }
     /* Style the list items */
     .todo ul li {
         cursor: pointer;
@@ -913,12 +968,10 @@ input[type=number] {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
         }
-        
         /* Set all odd list items to a different color (zebra-stripes) */
         .todo ul li:nth-child(odd) {
             background: #f3f3f3;
         }
-        
         /* Darker background-color on hover */
         .todo ul li:hover {
             background: #b0b0b0;

@@ -1,4 +1,9 @@
 
+// REFRESH PAGE ON TOP //
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 // MOBILE MENU //
 function mostrarMenuMobile(mobile) {
 	mobile.preventDefault();
@@ -52,7 +57,6 @@ let timerInterval = null;
 let onTimesUpChecks = 0;
 let updateInitialTimerValueFlag = 0;
 let onTimesUpFlag = 0;
-let audioCounter = 3;
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = timeLimit/4;
@@ -176,11 +180,8 @@ function setRemainingPathColor(timeLeft, timeLimit) {
 
 const onTimesUpAudio = function() {
   popupAudioPlayer.play();
-  audioCounter--;
-  if (audioCounter === 0) {
-    popupAudioPlayer.currentTime = 0;
-    popupAudioPlayer.loop = false;   
-  }
+  popupAudioPlayer.currentTime = 0;
+  popupAudioPlayer.loop = false;
 }
 
 function pauseTimer() {
