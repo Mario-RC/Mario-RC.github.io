@@ -4,6 +4,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
+
 // MOBILE MENU //
 function mostrarMenuMobile(mobile) {
 	mobile.preventDefault();
