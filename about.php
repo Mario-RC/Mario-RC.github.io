@@ -1,3 +1,24 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "mario.rcantelar@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $full_name = $_POST['full_name'];
+    //$first_name = $_POST['first_name'];
+    //$last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $full_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $full_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $full_name . ", I will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,10 +60,10 @@
     <meta name="twitter:site" content="@Mario_RC">
 
     <title>Mario R-C</title><link rel="icon" href="assets/img/logo.png">
-    <link rel="canonical" href="https://mario-rc.github.io/blog">
+    <link rel="canonical" href="https://mario-rc.github.io/about">
 </head>
 <body>
-    <header class="site-header site-header-blog">
+    <header class="site-header site-header-about">
         <div class="wrapper">
             <div class="site-title"><a href="index.html">Mario Rodríguez-Cantelar</a></div>
             <nav class="site-navigation">
@@ -57,14 +78,24 @@
             </nav>
         </div>
     </header>
-    <main class="site-main site-main-blog">
+    <main class="site-main site-main-about">
         <div class="wrapper">
-            <article class="site-layout site-layout-blog">
-                <section class="post">
-                    <h4>Post</h4>
-                    <article class="discussion">
-                        <p>Entry</p>
-                    </article>
+            <article class="site-layout site-layout-about">
+                <section class="about-me">
+                    <h4>About me</h4>
+                    <p>Hello! Welcome to my website!.</p>
+                </section>
+                <section class="contact-me">
+                    <h4>Contact</h4>
+                    <p>Any questions or comments, feel free to write me.</p>
+                    <form action="" method="post">
+                        <input name="full_name" type="text" class="contact-me-input" placeholder="Full name"/><br>
+                        <!-- <input name="first_name" type="text" class="contact-me-input" placeholder="First Name"/> -->
+                        <!-- <input name="last_name" type="text" class="contact-me-input" placeholder="Last Name"/> -->
+                        <input name="email" type="text" class="contact-me-input" placeholder="Email"/><br>
+                        <textarea name="message" class="contact-me-input" placeholder="Comment"></textarea><br>
+                        <input type="submit" name="submit" value="Send"/>
+                    </form>
                 </section>
             </article>
         </div>
@@ -89,9 +120,9 @@
             </div>
             <div class="footer-col-3">
                 <div class="footer-location">
-                    <a href="http://www.upm.es/internacional" class="institution"><i class="fas fa-fw fa-university"></i>Universidad Politécnica de Madrid</a></div>
+                    <i class="fas fa-fw fa-university"></i><a href="http://www.upm.es/internacional" class="institution">Universidad Politécnica de Madrid</a></div>
                 <div class="footer-location">
-                    <a href="https://www.esmadrid.com/en"><i class="fas fa-fw fa-map-marker-alt"></i>Madrid, Spain</a></div>
+                    <i class="fas fa-fw fa-map-marker-alt"></i><a href="https://en.wikipedia.org/wiki/Madrid">Madrid, Spain</a></div>
                 </div>
             </div>
         </div>

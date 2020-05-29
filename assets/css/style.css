@@ -57,7 +57,7 @@ html, body {
     color: #fcfcf7;
     text-transform: none;
 
-    font-size: 1rem;
+    font-size: 1rem; /* 16px */
     line-height: 1.5;
 }
 
@@ -132,10 +132,10 @@ input[type=text]::-ms-input-placeholder {
 .site-header-blog{
     position: relative;
 }
-.site-header-about{
+.site-header-focus{
     position: relative;
 }
-.site-header-focus{
+.site-header-about{
     position: relative;
 }
 .site-header{
@@ -243,16 +243,16 @@ input[type=text]::-ms-input-placeholder {
     .site-main-blog > .wrapper{
         display: block;
     }
-.site-main-about{
-    min-height: calc(100vh - 71.16px - 67.53px);
-}
-    .site-main-about > .wrapper{
-        display: block;
-    }
 .site-main-focus{
     min-height: calc(100vh - 71.16px - 67.53px);
 }
     .site-main-focus > .wrapper{
+        display: block;
+    }
+.site-main-about{
+    min-height: calc(100vh - 71.16px - 67.53px);
+}
+    .site-main-about > .wrapper{
         display: block;
     }
 @media (max-width: 800px){
@@ -260,7 +260,7 @@ input[type=text]::-ms-input-placeholder {
         grid-template-columns: 1fr 2fr;
     }
 }
-@media (max-width: 630px){
+@media (max-width: 650px){
     .site-main > .wrapper{
         display: flex;
         flex-flow: column;
@@ -327,7 +327,7 @@ input[type=text]::-ms-input-placeholder {
         max-width: 68%;
     }
 }
-@media (max-width: 630px){
+@media (max-width: 650px){
     .site-aside{
         text-align: center;
     }
@@ -356,13 +356,13 @@ input[type=text]::-ms-input-placeholder {
     grid-column: none;
     padding-top: 64px;
 }
-.site-layout-about{
-    grid-column: none;
-    padding-top: 64px;
-}
 .site-layout-focus{
     grid-column: none;
     padding-top: 0px;
+}
+.site-layout-about{
+    grid-column: none;
+    padding-top: 64px;
 }
 .site-layout{
     font-family: Helvetica, sans-serif;
@@ -478,6 +478,93 @@ input[type=text]::-ms-input-placeholder {
                     color: #727272;
                     text-decoration: none;
                 }
+    .post a{
+        color: #2962ff;
+    }
+    .post a:hover{
+        color: #0039cb;
+        text-decoration: none;
+    }
+    .post p{
+        margin-bottom: 16px;
+    }
+    .post h4{
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+    .discussion h4{
+        font-size: 20px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    .discussion li{
+        margin: 0px;
+    }
+    .about-me a{
+        color: #2962ff;
+    }
+    .about-me a:hover{
+        color: #0039cb;
+        text-decoration: none;
+    }
+    .about-me p{
+        margin-bottom: 16px;
+    }
+    .about-me h4{
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+    .contact-me{
+        display: flex;
+        flex-flow: column;
+    }
+        .contact-me h4{
+            font-size: 20px;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .contact-me p{
+            margin-left: 16px;
+            margin-bottom: 16px;
+        }
+        .contact-me .contact-me-input{
+            width: 40%;
+            font-size: 16px;
+            line-height: 16px;
+            background-color: transparent;
+            border: 2px solid #828282;
+            padding: 8px;
+            margin-left: 16px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            outline-style: none;
+        }
+        .contact-me .contact-me-input:focus{
+            border:2px solid #626262;
+        }
+        .contact-me textarea{
+            height: 100px;
+            line-height: 150%;
+        }
+        .contact-me input[type="submit"]{
+            width: 10%;
+            background: #f3675d;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            padding: 8px 0px;
+            margin-top: -4px;
+            margin-left: 16px;
+            font-weight: 400;
+            outline-style: none;
+        }
+        .contact-me input[type="submit"]:focus{
+            background: #f44336;
+        }
     .timer{
         align-content: center;
         text-align: center;
@@ -494,59 +581,65 @@ input[type=text]::-ms-input-placeholder {
         justify-content: center;
         text-transform: none;
     }
-    .timer > .wrapper select{
-        width: 100%;
-        border: 2px solid #c0c0c0;
-        border-radius: 4px;
-        color: #fcfcf7;
-        background-color: #41B883;
-        padding: 4px 0px;
-        margin: 4px auto 16px auto;
-        font-size: 16px;
-        text-align: center;
-        outline-style: none;
-    }
-        .set-tecnique-timer{
-            display: flex;
-            flex-flow: column;
-        }
         .set-focus-time{
             display: flex;
             flex-flow: column;
+            width: 15%;
+            margin: 0px 16px;
+        }
+        .set-tecnique-timer{
+            display: flex;
+            flex-flow: column;
+            width: 15%;
+            margin: 0px 16px;
         }
         .set-rest-time{
             display: flex;
             flex-flow: column;
+            width: 15%;
+            margin: 0px 16px;
         }
-    .timer > .wrapper input[type=number]{
-        width: 35%;
-        border: 2px solid #c0c0c0;
-        border-radius: 4px;
-        color: #fcfcf7;
-        background-color: #41B883;
-        padding: 4px 0px;
-        margin: 4px auto 16px auto;
-        font-size: 16px;
-        text-align: center;
-        outline-style: none;
-    }
-    .timer .control button{
-        cursor: pointer;
-        background: #fcfcf7;
-        color: #828282;
-        border: none;
-        outline-style: none;
-        padding: 8px;
-    }
-        .timer .control button i:hover{
-            color: #727272;
+        .timer > .wrapper select{
+            width: 85%;
+            border: 2px solid #c0c0c0;
+            border-radius: 4px;
+            color: #fcfcf7;
+            background-color: #41B883;
+            padding: 4px 0px;
+            margin: 4px auto 16px auto;
+            font-size: 16px;
+            text-align: center;
+            outline-style: none;
+        }
+        .timer > .wrapper input[type=number]{
+            width: 50%;
+            border: 2px solid #c0c0c0;
+            border-radius: 4px;
+            color: #fcfcf7;
+            background-color: #41B883;
+            padding: 4px 0px;
+            margin: 4px auto 16px auto;
+            font-size: 16px;
+            text-align: center;
+            outline-style: none;
+        }
+        .timer .controls button{
+            cursor: pointer;
+            background: #fcfcf7;
+            color: #828282;
             border: none;
-            text-decoration: none;
+            outline-style: none;
+            padding: 8px;
         }
-    .timer .checkmarks i{
-        cursor: auto;
-        padding: 16px 8px;
-    }
+            .timer .controls button i:hover{
+                color: #727272;
+                border: none;
+                text-decoration: none;
+            }
+        .timer .checkmarks i{
+            cursor: auto;
+            padding: 16px 8px;
+        }
     .techniques h4{
         font-size: 20px;
         margin-top: 48px;
@@ -591,9 +684,21 @@ input[type=text]::-ms-input-placeholder {
         align-content: center;
     }
 }
-@media (max-width: 630px){
+@media (max-width: 650px){
     .site-layout > .wrapper{
         margin: 16px 0;
+    }
+    .set-focus-time{
+        width: 20%;
+    }
+    .set-tecnique-timer{
+        width: 27%;
+    }
+    .set-rest-time{
+        width: 20%;
+    }
+    .timer .checkmarks i{
+        font-size: 14px;
     }
 }
 
@@ -662,7 +767,7 @@ input[type=text]::-ms-input-placeholder {
         grid-template-columns: 5fr 3fr 6fr;
     }
 }
-@media (max-width: 630px){
+@media (max-width: 650px){
     .site-footer > .wrapper{
         display: flex;
         flex-flow: column;
@@ -874,6 +979,17 @@ input[type=text]::-ms-input-placeholder {
     justify-content: center;
     font-size: 48px;
   }
+  @media (max-width: 650px){
+    .base-timer{
+        width: 200px;
+        height: 200px;
+    }
+    .base-timer__label{
+        width: 200px;
+        height: 200px;
+        font-size: 32px;
+    }
+}
 
 /* TO-DO LIST */
 /* Include the padding and border in an element's total width and height */
@@ -895,6 +1011,10 @@ input[type=text]::-ms-input-placeholder {
             content: "";
             display: table;
             clear: both;
+        }
+        .todo h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
         }
         /* Style the input */
         .todo input[type=text]{
@@ -926,10 +1046,6 @@ input[type=text]::-ms-input-placeholder {
             .todo .addBtn:hover {
                 background-color: #bbb;
             }
-        .todo h4 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
         /* Style the close button */
         .todo .close {
             position: relative;
@@ -995,4 +1111,21 @@ input[type=text]::-ms-input-placeholder {
             height: 15px;
             width: 7px;
         }
-  
+@media (max-width: 650px){
+    .todo .todo-header {
+        padding: 4px 8px;
+    }
+    .todo h4 {
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+    .todo input[type=text]{
+        padding: 8.5px;
+    }
+    .todo .addBtn {
+        padding: 6px;
+    }
+    .todo ul li {
+        padding: 8px 4px 8px 19px;
+    }
+}
