@@ -1,5 +1,4 @@
-
-<!-- <?php 
+<?php 
 if(isset($_POST['submit'])){
     $to = "mario.rcantelar@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
@@ -16,7 +15,7 @@ if(isset($_POST['submit'])){
     echo "Mail Sent. Thank you " . $full_name . ", I will contact you shortly.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,14 +86,12 @@ if(isset($_POST['submit'])){
                 <section class="contact-me">
                     <h4>Contact</h4>
                     <p>Any questions or comments, feel free to contact me.</p>
-                    <!--
                     <form action="" method="post">
                         <input name="full_name" type="text" class="contact-me-input" placeholder="Full name"/><br>
                         <input name="email" type="text" class="contact-me-input" placeholder="Email"/><br>
                         <textarea name="message" class="contact-me-input" placeholder="Comment"></textarea><br>
                         <input type="submit" name="submit" value="Send"/>
                     </form>
-                    -->
                 </section>
             </article>
         </div>
