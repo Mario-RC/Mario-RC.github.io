@@ -1,9 +1,10 @@
-
-<!-- <?php 
+<?php 
 if(isset($_POST['submit'])){
     $to = "mario.rcantelar@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $full_name = $_POST['full_name'];
+    //$first_name = $_POST['first_name'];
+    //$last_name = $_POST['last_name'];
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = $full_name . " wrote the following:" . "\n\n" . $_POST['message'];
@@ -16,7 +17,7 @@ if(isset($_POST['submit'])){
     echo "Mail Sent. Thank you " . $full_name . ", I will contact you shortly.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +71,7 @@ if(isset($_POST['submit'])){
                     <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
                     <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
                     <a href="focus.html"><i class="fas fa-stopwatch-20"></i>Focus</a>
-                    <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+                    <a href="about.php"><i class="fas fa-fw fa-user"></i>About</a>
                     <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
                 </div>
                 <a class="btn-menu trigger-menu"><i class="fas fa-fw fa-bars"></i></a>
@@ -86,15 +87,15 @@ if(isset($_POST['submit'])){
                 </section>
                 <section class="contact-me">
                     <h4>Contact</h4>
-                    <p>Any questions or comments, feel free to contact me.</p>
-                    <!--
+                    <p>Any questions or comments, feel free to write me.</p>
                     <form action="" method="post">
                         <input name="full_name" type="text" class="contact-me-input" placeholder="Full name"/><br>
+                        <!-- <input name="first_name" type="text" class="contact-me-input" placeholder="First Name"/> -->
+                        <!-- <input name="last_name" type="text" class="contact-me-input" placeholder="Last Name"/> -->
                         <input name="email" type="text" class="contact-me-input" placeholder="Email"/><br>
                         <textarea name="message" class="contact-me-input" placeholder="Comment"></textarea><br>
                         <input type="submit" name="submit" value="Send"/>
                     </form>
-                    -->
                 </section>
             </article>
         </div>
@@ -136,7 +137,7 @@ if(isset($_POST['submit'])){
             <a href="index.html"><i class="fas fa-fw fa-home"></i>Home</a>
             <a href="blog.html"><i class="fas fa-fw fa-search"></i>Blog</a>
             <a href="focus.html"><i class="fas fa-stopwatch-20"></i>Focus</a>
-            <a href="about.html"><i class="fas fa-fw fa-user"></i>About</a>
+            <a href="about.php"><i class="fas fa-fw fa-user"></i>About</a>
             <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
         </nav>
     </section>

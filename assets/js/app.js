@@ -4,7 +4,6 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
-
 // MOBILE MENU //
 function mostrarMenuMobile(mobile) {
 	mobile.preventDefault();
@@ -204,7 +203,7 @@ function calculateTimeLeft(timeLimit, timePassed) {
   return timeLeft = timeLimit - timePassed;
 }
 
-function displayIcon(Tecnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks) {
+function displayIcon(Technique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks) {
   // onTimesUpFlag=1:focus, onTimesUpFlag=1:rest
   halfTimeLimit = Math.round(timeLimit/2);
   endTimeLimit = Math.round(timeLimit/8);
@@ -279,7 +278,7 @@ function displayIcon(Tecnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChec
   }
   else {
     // Restart checkmarks states
-    if (Tecnique === "pomodoro") {
+    if (Technique === "pomodoro") {
       check1.style.display = "inline-flex";
       check2.style.display = "none";
       check3.style.display = "none";
@@ -294,20 +293,20 @@ function displayIcon(Tecnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChec
 }
 
 function getTechniqueTimes() {
-  Tecnique = document.getElementById("technique").value;
+  Technique = document.getElementById("technique").value;
   FocusTime = document.getElementById("focusTime").value*60;
   RestTime = document.getElementById("restTime").value*60;
-  return Tecnique, FocusTime, RestTime;
+  return Technique, FocusTime, RestTime;
 }
 
 function startTimer() {
   if (updateInitialTimerValueFlag === 0) {
     updateInitialTimerValueFlag = 1;
-    Tecnique = document.getElementById("technique").value;
+    Technique = document.getElementById("technique").value;
     FocusTime = document.getElementById("focusTime").value*60;
     RestTime = document.getElementById("restTime").value*60;
     timeLimit = FocusTime; // Set initial timer time
-    if (Tecnique === "pomodoro") {
+    if (Technique === "pomodoro") {
       onTimesUpChecks = 1;
     }
   }
@@ -323,13 +322,13 @@ function startTimer() {
     // Stop button
     stopBtn.addEventListener("click", function (event) {
       timePassed = 0;
-      Tecnique, FocusTime, RestTime = getTechniqueTimes();
+      Technique, FocusTime, RestTime = getTechniqueTimes();
       timeLimit = FocusTime;
       timeLeft = calculateTimeLeft(timeLimit, timePassed);
       printTimer(timeLeft, timeLimit);
       onTimesUpFlag = 0;
       onTimesUpChecks = 0;
-      displayIcon(Tecnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks)
+      displayIcon(Technique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks)
       startBtn.disabled = false;
       updateInitialTimerValueFlag = 0;
       pauseTimer();
@@ -354,10 +353,12 @@ function startTimer() {
         // If 4 checkmarks, restart checkmarks count
         if (onTimesUpChecks === 4) {
           onTimesUpChecks = 0;
-          displayIcon(Tecnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
+          displayIcon(Technique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
         }
-        // Increase number of checkmarks
-        onTimesUpChecks += 1;
+        // Increase number of checkmarks if pomodoro technique is selected
+        if (Technique === "Pomodoro") {
+          onTimesUpChecks += 1;
+        }
         // Set focus time
         timeLimit = FocusTime;
       // Set rest time limit
@@ -373,7 +374,7 @@ function startTimer() {
         }
       }
     }
-    displayIcon(Tecnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
+    displayIcon(Technique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
 
   }, 1000);
 }
@@ -384,18 +385,18 @@ startBtn.addEventListener("click", function (event) {
 });
 
 function displayTimerTimes() {
-  InitialTecnique = document.getElementById("technique").value;
+  InitialTechnique = document.getElementById("technique").value;
   InitialFocusTime = document.getElementById("focusTime");
   InitialRestTime = document.getElementById("restTime");
-  if(InitialTecnique === "pomodoro") {
+  if(InitialTechnique === "pomodoro") {
     InitialFocusTime.value = 25;
     InitialRestTime.value = 5;
   }
-  else if(InitialTecnique === "rule 52/17") {
+  else if(InitialTechnique === "rule 52/17") {
     InitialFocusTime.value = 52;
     InitialRestTime.value = 17;
   }
-  else if(InitialTecnique === "ultradian") {
+  else if(InitialTechnique === "ultradian") {
     InitialFocusTime.value = 90;
     InitialRestTime.value = 20;
   }
@@ -405,25 +406,25 @@ function displayTimerTimes() {
     timeLeft = timeLimit;
     printTimer(timeLeft, timeLimit);
     onTimesUpChecks = 0;
-    displayIcon(InitialTecnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
+    displayIcon(InitialTechnique, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
   }
 }
 
 function displayTechnique() {
   InitialFocusTime = document.getElementById("focusTime").value;
   InitialRestTime = document.getElementById("restTime").value;
-  InitialTecnique = document.getElementById("technique");
+  InitialTechnique = document.getElementById("technique");
   if(InitialFocusTime === "25" && InitialRestTime === "5") {
-    InitialTecnique.value = "pomodoro";
+    InitialTechnique.value = "pomodoro";
   }
   else if(InitialFocusTime === "52" && InitialRestTime === "17") {
-    InitialTecnique.value = "rule 52/17";
+    InitialTechnique.value = "rule 52/17";
   }
   else if(InitialFocusTime === "90" && InitialRestTime === "20") {
-    InitialTecnique.value = "ultradian";
+    InitialTechnique.value = "ultradian";
   }
   else {
-    InitialTecnique.value = "customize";
+    InitialTechnique.value = "customize";
   }
   // Display Updated Timer
   if(updateInitialTimerValueFlag === 0) {
@@ -431,7 +432,7 @@ function displayTechnique() {
     timeLeft = timeLimit;
     printTimer(timeLeft, timeLimit);
     onTimesUpChecks = 0;
-    displayIcon(InitialTecnique.value, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
+    displayIcon(InitialTechnique.value, timeLeft, timeLimit, onTimesUpFlag, onTimesUpChecks);
   }
 }
 
