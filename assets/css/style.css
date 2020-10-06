@@ -99,6 +99,9 @@ body{
     .label--blue{
         background-color: #2a7ae2;
     }
+    .label--red{
+        background-color: #d9534f;
+    }
 
 /* Hide Input Number Arrows */
 /* Chrome, Safari, Edge, Opera */
@@ -410,7 +413,19 @@ input[type=text]::-ms-input-placeholder {
     .publications ul{
         margin-bottom: 24px;
     }
-    .year{
+    .publications .year{
+        color: #828282;
+    }
+    .stays h4{
+        font-size: 20px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    .stays ul{
+        margin-bottom: 24px;
+    }
+    .stays .year{
         color: #828282;
     }
     .site-layout > .wrapper{
