@@ -93,15 +93,39 @@ body{
     .label--default{
         background-color: #777;
     }
-        .label:hover{
+        .label--default:hover{
             background-color: #555;
         }
     .label--blue{
         background-color: #2a7ae2;
     }
+        .label--blue:hover{
+            background-color: #337ab7;
+        }
+    .label--light-blue{
+        background-color: #5bc0de;
+    }
+        .label--light-blue:hover{
+            background-color: #3bb8df;
+        }
     .label--red{
         background-color: #d9534f;
     }
+        .label--red:hover{
+            background-color: #db302a;
+        }
+    .label--yellow{
+        background-color: #f0ad4e;
+    }
+        .label--yellow:hover{
+            background-color: #f09d28;
+        }
+    .label--green{
+        background-color: #5cb85c;
+    }
+        .label--green:hover{
+            background-color: #38b838;
+        }
 
 /* Hide Input Number Arrows */
 /* Chrome, Safari, Edge, Opera */
