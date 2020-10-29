@@ -54,7 +54,7 @@ html, body {
     text-size-adjust: none;
     
     font-family: Lora,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #fcfcf7;
+    color: white;
     text-transform: none;
 
     font-size: 1rem; /* 16px */
@@ -84,7 +84,7 @@ body{
     font-size: 75%;
     font-weight: 700;
     line-height: 1;
-    color: #fcfcf7;
+    color: white;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
@@ -168,7 +168,7 @@ input[type=text]::-ms-input-placeholder {
 .site-header{
     padding: 16px 0px;
     border-bottom: solid 1px #e8e8e8;
-    background-color: #fcfcf7;
+    background-color: white;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -224,7 +224,7 @@ input[type=text]::-ms-input-placeholder {
                 .language .dropdown-language{
                     display: none;
                     position: absolute;
-                    background-color: #fcfcf7;
+                    background-color: white;
                     min-width: 128px;
                     box-shadow: 0px 4px 4px 0px #e8e8e8;
                     z-index: 8000;
@@ -251,7 +251,7 @@ input[type=text]::-ms-input-placeholder {
 .site-main{
     position: relative;
     padding: 64px 0px;
-    background-color: #fcfcf7;
+    background-color: white;
 }
 .site-main > .wrapper{
     text-transform: none;
@@ -642,7 +642,7 @@ input[type=text]::-ms-input-placeholder {
             width: 85%;
             border: 2px solid #c0c0c0;
             border-radius: 4px;
-            color: #fcfcf7;
+            color: white;
             background-color: #41B883;
             padding: 4px 0px;
             margin: 4px auto 16px auto;
@@ -654,7 +654,7 @@ input[type=text]::-ms-input-placeholder {
             width: 50%;
             border: 2px solid #c0c0c0;
             border-radius: 4px;
-            color: #fcfcf7;
+            color: white;
             background-color: #41B883;
             padding: 4px 0px;
             margin: 4px auto 16px auto;
@@ -664,7 +664,7 @@ input[type=text]::-ms-input-placeholder {
         }
         .timer .controls button{
             cursor: pointer;
-            background: #fcfcf7;
+            background: white;
             color: #828282;
             border: none;
             outline-style: none;
@@ -747,7 +747,7 @@ input[type=text]::-ms-input-placeholder {
     padding: 16px 0;
     border-top: solid 1px #e8e8e8;
 
-    background: #fcfcf7;
+    background: white;
 
 	bottom: 0;
 	left: 0;
@@ -824,7 +824,7 @@ input[type=text]::-ms-input-placeholder {
 
 	width: 100%;
 	height: 100vh;
-	background: #fcfcf7;
+	background: white;
 
 	overflow-y: auto;
 
@@ -877,17 +877,17 @@ input[type=text]::-ms-input-placeholder {
 
 /* DARK MODE */
 .dark-mode .body{
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .site-header{
     background-color: #1d1f27;
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .language{
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .btn-language{
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .dropdown-language{
     background-color: #1d1f27;
@@ -898,7 +898,7 @@ input[type=text]::-ms-input-placeholder {
 }
 .dark-mode .site-main{
     background-color: #272935;
-    color: #fcfcf7;
+    color: white;
 }
     .dark-mode .course a:hover{
         text-decoration: none;
@@ -906,15 +906,15 @@ input[type=text]::-ms-input-placeholder {
     }
 .dark-mode .site-footer{
     background-color: #272935;
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .mobile-menu{
     background-color: #272935;
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .site-layout-focus button{
     background-color: #272935;
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .site-layout-focus button i:hover{
     color: #ececec;
@@ -926,21 +926,21 @@ input[type=text]::-ms-input-placeholder {
     background-color: #96271f;
 }
 .dark-mode .site-layout-focus .todo input[type=text]{
-    color: #fcfcf7;
+    color: white;
     background-color: #272935;
 }
 .dark-mode .site-layout-focus .todo input[type=text]::placeholder {
-    color: #fcfcf7;
+    color: white;
     opacity: 1;
 }
 .dark-mode .site-layout-focus .todo input[type=text]:-ms-input-placeholder {
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .site-layout-focus .todo input[type=text]::-ms-input-placeholder {
-    color: #fcfcf7;
+    color: white;
 }
 .dark-mode .site-layout-focus .todo .addBtn {
-    color: #fcfcf7;
+    color: white;
     background: #272935;
 }
 .dark-mode .site-layout-focus .todo .addBtn:hover {
@@ -1040,7 +1040,7 @@ input[type=text]::-ms-input-placeholder {
     .todo .todo-header {
         background-color: #f44336;
         padding: 8px 16px;
-        color: #fcfcf7;
+        color: white;
         text-align: center;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
@@ -1065,7 +1065,7 @@ input[type=text]::-ms-input-placeholder {
             float: left;
             font-size: 14px;
             color: #727272;
-            background-color: #fcfcf7;
+            background-color: white;
         }
         /* Style the "Add" button */
         .todo .addBtn {
@@ -1095,7 +1095,7 @@ input[type=text]::-ms-input-placeholder {
             }
             .todo .close:hover {
                 background-color: #f44336;
-                color: #fcfcf7;
+                color: white;
             }
     /* Remove margins and padding from the list */
     .todo ul {
@@ -1133,7 +1133,7 @@ input[type=text]::-ms-input-placeholder {
         }
         /* When clicked on, add a background color and strike out text */
         .todo ul li.checked {
-            color: #fcfcf7;
+            color: white;
             background: #808080;
             text-decoration: line-through;
         }
@@ -1141,7 +1141,7 @@ input[type=text]::-ms-input-placeholder {
         .todo ul li.checked::before {
             content: '';
             position: absolute;
-            border-color: #fcfcf7;
+            border-color: white;
             border-style: solid;
             border-width: 0 2px 2px 0;
             top: 10px;
