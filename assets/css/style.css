@@ -282,6 +282,12 @@ input[type=text]::-ms-input-placeholder {
     .site-main-about > .wrapper{
         display: block;
     }
+.site-main-paper{
+    min-height: calc(100vh - 71.16px - 67.53px);
+}
+    .site-main-paper > .wrapper{
+        display: block;
+    }
 @media (max-width: 800px){
     .site-main > .wrapper{
         grid-template-columns: 1fr 2fr;
@@ -390,6 +396,10 @@ input[type=text]::-ms-input-placeholder {
 .site-layout-about{
     grid-column: none;
     padding-top: 64px;
+}
+.site-layout-paper{
+    grid-column: none;
+    padding: 64px 0 64px 0;
 }
 .site-layout{
     font-family: Helvetica, sans-serif;
@@ -714,6 +724,63 @@ input[type=text]::-ms-input-placeholder {
     }
     .techniques p{
         display: list-item;
+    }
+    .paper-table h4{
+        font-size: 20px;
+        margin-bottom: 48px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .paper-table table{
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .paper-table th{
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid black;
+        padding: 6px;
+        width: 20%;
+        vertical-align: middle;
+    }
+    .paper-table td{
+        font-size: 12px;
+        border: 1px solid black;
+        padding: 10px;
+        width: 20%;
+        vertical-align: middle;
+    }
+        .paper-table th:first-child,
+        .paper-table td:first-child {
+            text-align: center;
+            width: 6%;
+        }
+        .paper-table td:nth-child(2){
+            font-weight: bold;
+        }
+        .paper-table td:last-child {
+            font-size: 11px;
+        }
+        .paper-table td img{
+            display: inline-block;
+            margin: 0px 4px;
+            width: 14px;
+        }
+    .paper-table a{
+        color: #2962ff;
+    }
+    .paper-table a:hover{
+        color: #0039cb;
+        text-decoration: none;
+    }
+    .conference-table td{
+        width: 20%;
+    }
+    .journal-table td{
+        width: 40%;
     }
 @media (max-width: 800px){
     .site-layout > .wrapper{
