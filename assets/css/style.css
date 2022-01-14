@@ -779,6 +779,9 @@ input[type=text]::-ms-input-placeholder {
     .conference-table td{
         width: 20%;
     }
+    .conference-table p{
+        color: red;
+    }
     .journal-table td{
         width: 40%;
     }
