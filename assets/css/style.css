@@ -462,6 +462,18 @@ input[type=text]::-ms-input-placeholder {
     .stays .year{
         color: #828282;
     }
+    .corpora h4{
+        font-size: 20px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    .corpora ul{
+        margin-bottom: 24px;
+    }
+    .corpora .year{
+        color: #828282;
+    }
     .site-layout > .wrapper{
         display: grid;
         grid-template-columns: 4fr 5fr;
