@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T1NFXGH4FE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-T1NFXGH4FE");
+    </script>
+
+    <!--  CSS Style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--  Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <!--  Open Graph Description META Tags -->
+    <meta property="og:title" content="Mario Rodríguez-Cantelar" />
+    <meta property="og:description" content="My personal page." />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://mario-rc.github.io/focus-es.html"
+    />
+    <meta
+      property="og:image"
+      content="https://mario-rc.github.io/assets/img/logo/og.jpg"
+    />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta
+      name="description"
+      content="Focus timer  -  Pomodoro and other techniques to improve concentration."
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mario Rodríguez-Cantelar" />
+    <meta name="twitter:description" content="My personal website." />
+    <meta name="twitter:image" content="assets/img/og.jpg" />
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="Mario Rodríguez-Cantelar" />
+    <meta name="twitter:image:alt" content="My personal website" />
+    <!--  Required for Analytics -->
+    <meta property="fb:app_id" content="203555734391977" />
+    <meta name="twitter:site" content="@Mario_RC" />
+
+    <title id="timerTab"></title>
+    <link rel="icon" href="assets/img/logo/logo.png" />
+    <link rel="canonical" href="https://mario-rc.github.io/focus-es.html" />
+  </head>
+  <body>
+    <header class="site-header site-header-blog">
+      <div class="wrapper">
+        <div class="site-title">
+          <a href="index-es.html">Mario Rodríguez-Cantelar</a>
+        </div>
+        <h1 class="visually-hidden">Focus Timer - Mario Rodríguez-Cantelar</h1>
+        <nav class="site-navigation">
+          <div class="menu">
+            <a href="index-es.html"><i class="fas fa-fw fa-home"></i>Home</a>
+            <a href="cv-es.html"><i class="fas fa-fw fa-user"></i>CV</a>
+            <a href="blog-es.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+            <a href="focus-es.html"><i class="fas fa-stopwatch-20"></i>Focus</a>
+            <div class="language">
+              <button class="btn-language">
+                <i class="fas fa-fw fa-globe"></i>
+              </button>
+              <div class="dropdown-language">
+                <a href="focus.html">English</a>
+                <a href="focus-es.html">Español</a>
+              </div>
+            </div>
+            <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
+          </div>
+          <a class="btn-menu trigger-menu"><i class="fas fa-fw fa-bars"></i></a>
+        </nav>
+      </div>
+    </header>
+    <main class="site-main site-main-focus">
+      <div class="wrapper">
+        <article class="site-layout site-layout-focus">
+          <section class="timer">
+            <h4>Temporizador de Enfoque</h4>
+            <div class="wrapper">
+              <div class="set-focus-time">
+                <label for="focusName">Enfoque</label>
+                <input
+                  type="number"
+                  id="focusTime"
+                  name="focusName"
+                  value="25"
+                  max="120"
+                  onchange="displayTechnique()"
+                />
+              </div>
+              <div class="set-tecnique-timer">
+                <label for="techniqueName">Técnica</label>
+                <select
+                  id="technique"
+                  name="techniqueName"
+                  onchange="displayTimerTimes()">
+                  <option value="pomodoro" selected>Pomodoro</option>
+                  <option value="rule 52/17">Regla 52/17</option>
+                  <option value="ultradian">Ritmos ultradianos</option>
+                  <option value="customize">Personalizar</option>
+                </select>
+              </div>
+              <div class="set-rest-time">
+                <label for="restName">Descanso</label>
+                <input
+                  type="number"
+                  id="restTime"
+                  name="restName"
+                  value="5"
+                  max="30"
+                  onchange="displayTechnique()"
+                />
+              </div>
+            </div>
+            <div id="timerClock"></div>
+            <div class="controls">
+              <button id="start">
+                <i class="fas fa-play"></i>
+              </button>
+              <button id="pause">
+                <i class="fas fa-pause"></i>
+              </button>
+              <button id="stop">
+                <i class="fas fa-stop"></i>
+              </button>
+              <audio id="times-up-audio">
+                <source
+                  src="assets/audio/harp-strumming.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+            </div>
+            <div class="checkmarks">
+              <i id="check1" class="fas fa-hourglass-start"></i>
+              <i id="check2" class="fas fa-hourglass-start"></i>
+              <i id="check3" class="fas fa-hourglass-start"></i>
+              <i id="check4" class="fas fa-hourglass-start"></i>
+            </div>
+          </section>
+          <section class="todo">
+            <div class="todo-header">
+              <h4>Lista de tareas</h4>
+              <input type="text" id="todo-input" placeholder="Nueva tarea..." />
+              <span onclick="newtoDoInput()" class="addBtn">Añadir</span>
+            </div>
+            <ul id="todo-list">
+              <!-- <li class="checked"></li> -->
+              <li>Actualizar código web</li>
+              <li>Trabajar en el código del proyecto</li>
+              <li>Leer un artículo nuevo</li>
+              <li>Dar un paseo</li>
+            </ul>
+          </section>
+          <section class="techniques">
+            <h4>Técnica del temporizador</h4>
+            <article>
+              <section>
+                <h5 class="techniques-name">
+                  Pomodoro (por
+                  <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Francesco Cirillo</a>)
+                </h5>
+                <ul>
+                  <li>
+                    <ol class="decimal">
+                      <p>Elige y lista cuatro tareas para completar.</p>
+                      <p>Configura un temporizador de enfoque (tradicionalmente 25 minutos).</p>
+                      <p>Trabaja en la tarea seleccionada hasta que suene el temporizador. Cuando termine, ganas una marca de pomodoro (reloj de arena).</p>
+                      <p>Si tienes menos de cuatro marcas, toma un descanso corto (tradicionalmente 5 minutos) y luego vuelve al paso 2.</p>
+                      <p>Tras reunir cuatro marcas, toma un descanso más largo (unos 25 minutos) y luego vuelve al paso 1.</p>
+                    </ol>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <h5 class="techniques-name">
+                  Regla 52/17 (por
+                  <a
+                    href="https://www.themuse.com/advice/the-rule-of-52-and-17-its-random-but-it-ups-your-productivity">Daily Muse</a>)
+                </h5>
+                <ul>
+                  <li>
+                    <ol class="disc">
+                      <p>Trabaja durante 52 minutos y luego toma un descanso de 17 minutos.</p>
+                      <p>Usa tus descansos sabiamente para recargar y maximizar la efectividad de tus sesiones de trabajo.</p>
+                      <p>Aléjate de tu ordenador y deja el teléfono a un lado.</p>
+                      <p>Haz algunos ejercicios suaves o da una caminata corta para despejar la mente y mover el cuerpo.</p>
+                      <p>Habla con colegas - sobre cualquier cosa excepto trabajo.</p>
+                    </ol>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <h5 class="techniques-name">
+                  Ritmos ultradianos (por
+                  <a
+                    href="https://en.wikipedia.org/wiki/Basic_rest%E2%80%93activity_cycle">Nathaniel Kleitman</a>)
+                </h5>
+                <ul>
+                  <li>
+                    <ol class="disc">
+                      <p>Concéntrate en tu tarea más importante durante 60 - 90 minutos.</p>
+                      <p>Luego toma un descanso reparador de 20 minutos.</p>
+                      <p>Dentro de esos bloques de trabajo de 60 - 90 minutos, también puedes estructurar el tiempo usando ciclos Pomodoro (25 minutos de enfoque, 5 minutos de descanso).</p>
+                      <p>Durante tu descanso, aléjate completamente del trabajo - da un paseo, medita, disfruta de una siesta corta o conversa con un amigo.</p>
+                      <p>El objetivo es darle a tu cerebro la oportunidad de desconectarse completamente y recargarse.</p>
+                    </ol>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <h5 class="techniques-name">
+                  Personalizar (por
+                  <a href="https://maps.app.goo.gl/jPLQJs6XQSjVcNAAA">Ti</a>)
+                </h5>
+                <ul>
+                  <li>
+                    <ol class="disc">
+                      <p>¿Sientes que el cronometraje no es del todo correcto?</p>
+                      <p>Experimenta con diferentes combinaciones para descubrir lo que mejor funciona y define tu ciclo de enfoque óptimo.</p>
+                    </ol>
+                  </li>
+                </ul>
+              </section>
+            </article>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="footer-col-1">
+          <div class="footer-contact">
+            <div class="footer-contact__items">
+              <i class="fas fa-fw fa-user"></i>Mario Rodríguez-Cantelar
+            </div>
+            <div class="footer-contact__items">
+              <a href="mailto:mario.rcantelar@gmail.com"><i class="fas fa-fw fa-envelope"></i>mario.rcantelar@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <div class="footer-social-media">
+            <div class="footer-social-media__items">
+              <a
+                href="https://scholar.google.com/citations?user=gdGRy7gAAAAJ&amp;hl=en"><i class="fab fa-fw fa-google"></i>Google Scholar</a>
+            </div>
+            <div class="footer-social-media__items">
+              <a href="https://github.com/Mario-RC"><i class="fab fa-fw fa-github"></i>Mario-RC</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-3">
+          <div class="footer-location">
+            <a href="https://www.upm.es/internacional" class="institution"><i class="fas fa-fw fa-university"></i>Universidad Politécnica de
+              Madrid</a>
+          </div>
+          <div class="footer-location">
+            <a href="https://www.esmadrid.com/en"><i class="fas fa-fw fa-map-marker-alt"></i>Madrid, Spain</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="mobile-menu">
+      <header class="mobile-menu__header">
+        <span></span>
+        <h2 class="site-title"><b>MENU</b></h2>
+        <a href="#" class="trigger-menu"><i class="fas fa-fw fa-times"></i></a>
+      </header>
+      <nav class="mobile-menu__navigation">
+        <a href="index-es.html"><i class="fas fa-fw fa-home"></i>Home</a>
+        <a href="cv-es.html"><i class="fas fa-fw fa-user"></i>CV</a>
+        <a href="blog-es.html"><i class="fas fa-fw fa-search"></i>Blog</a>
+        <a href="focus-es.html"><i class="fas fa-stopwatch-20"></i>Focus</a>
+        <button class="btn-language">
+          <a><i class="fas fa-fw fa-globe"></i></a>
+        </button>
+        <div class="dropdown-language">
+          <a href="focus.html">English</a>
+          <a href="focus-es.html">Español</a>
+        </div>
+        <a href="#" onclick="toggleDark()"><i onclick="toggleIcon(this)" class="fas fa-fw fa-moon"></i></a>
+      </nav>
+    </section>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
